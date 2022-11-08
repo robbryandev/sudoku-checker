@@ -76,4 +76,6 @@ export default class Board {
     const valid = this.checkTiles() && this.checkRows() && this.checkColumns();
     return valid;
   }
+
+  isFilled() {}
 }

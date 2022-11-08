@@ -87,3 +87,15 @@ describe("Board.isValid", () => {
     expect(boardVar.isValid()).toEqual(false);
   });
 });
+
+describe("Board.isFilled", () => {
+  let boardVar;
+
+  beforeEach(() => {
+    boardVar = new Board();
+  });
+
+  test("Should check if an empty board is filled", () => {
+    expect(boardVar.isFilled()).toEqual(false);
+  });
+});
