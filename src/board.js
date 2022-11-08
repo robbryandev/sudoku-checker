@@ -25,9 +25,21 @@ export default class Board {
     let valid = true;
     for (let i = 0; i < 3; i++) {
       // Get tiles in board row
-      let tileOne = this.tiles[i];
-      let tileTwo = this.tiles[i + 1];
-      let tileThree = this.tiles[i + 2];
+      let tileIndex;
+      switch (i) {
+      case 0:
+        tileIndex = 0;
+        break;
+      case 1:
+        tileIndex = 3;
+        break;
+      case 2:
+        tileIndex = 6;
+        break;
+      }
+      let tileOne = this.tiles[tileIndex];
+      let tileTwo = this.tiles[tileIndex + 1];
+      let tileThree = this.tiles[tileIndex + 2];
       let tileSet = [tileOne, tileTwo, tileThree];
       for (let r = 0; r < 3; r++) {
         // Get squares in tile row
