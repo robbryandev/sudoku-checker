@@ -45,4 +45,9 @@ describe("Board.checkRows", () => {
   test("Should check if all empty rows are valid", () => {
     expect(boardVar.checkRows()).toEqual(true);
   });
+
+  test("Should check if a bad row is valid", () => {
+    boardVar.tiles[0].self[0] = [1, 2, 2];
+    expect(boardVar.checkRows()).toEqual(false);
+  });
 });
