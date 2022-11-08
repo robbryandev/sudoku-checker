@@ -1,6 +1,6 @@
 import Board from "../src/board.js";
 
-describe("Example", () => {
+describe("Board", () => {
   let boardVar;
 
   beforeEach(() => {

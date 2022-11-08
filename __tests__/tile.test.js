@@ -1,6 +1,6 @@
 import Tile from "../src/tile.js";
 
-describe("Example", () => {
+describe("Tile", () => {
   let tileOne;
 
   beforeEach(() => {
