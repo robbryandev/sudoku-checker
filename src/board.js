@@ -11,5 +11,13 @@ export default class Board {
     this.tiles = tileArray;
   }
 
-  checkTiles() {}
+  checkTiles() {
+    let valid = true;
+    this.tiles.forEach((tile) => {
+      if (!tile.isValid()) {
+        valid = false;
+      }
+    });
+    return valid;
+  }
 }
