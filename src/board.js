@@ -77,5 +77,20 @@ export default class Board {
     return valid;
   }
 
-  isFilled() {}
+  isFilled() {
+    let filled = false;
+    if (this.isValid()) {
+      filled = true;
+      let anyBad = false;
+      this.tiles.forEach((ts) => {
+        if (!ts.isFilled()) {
+          anyBad = true;
+        }
+      });
+      if (anyBad) {
+        filled = false;
+      }
+    }
+    return filled;
+  }
 }
