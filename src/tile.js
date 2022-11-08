@@ -17,7 +17,24 @@ export default class Tile {
     return valid;
   }
 
-  isFilled() {}
+  isFilled() {
+    let filled = false;
+    let valid = this.isValid();
+    if (valid) {
+      let squares = [];
+      this.self.forEach((row) => {
+        row.forEach((sq) => {
+          if (sq > 0) {
+            squares.push(sq);
+          }
+        });
+      });
+      if (squares.length === 9) {
+        filled = true;
+      }
+    }
+    return filled;
+  }
 }
 
 export function checkSquares(squareVar) {

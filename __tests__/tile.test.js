@@ -44,4 +44,14 @@ describe("Tile.isFilled", () => {
   test("Should check if an empty tile is filled", () => {
     expect(tileVar.isFilled()).toEqual(false);
   });
+
+  test("Should check if a good tile is filled", () => {
+    tileVar.self = [[1,2,3],[4,5,6],[7,8,9]];
+    expect(tileVar.isFilled()).toEqual(true);
+  });
+
+  test("Should check if a bad tile is filled", () => {
+    tileVar.self = [[1,2,3],[4,5,6],[7,3,9]];
+    expect(tileVar.isFilled()).toEqual(true);
+  });
 });
