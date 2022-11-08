@@ -51,3 +51,15 @@ describe("Board.checkRows", () => {
     expect(boardVar.checkRows()).toEqual(false);
   });
 });
+
+describe("Board.checkColumns", () => {
+  let boardVar;
+
+  beforeEach(() => {
+    boardVar = new Board();
+  });
+
+  test("Should check if all empty columns are valid", () => {
+    expect(boardVar.checkColumns()).toEqual(true);
+  });
+});
