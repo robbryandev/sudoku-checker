@@ -8,7 +8,9 @@ export default class Tile {
     let used = [];
     this.self.forEach((row) => {
       for (let i = 0; i < 3; i++) {
-        used.includes(row[i]) ? valid = false : used.push(row[i]);
+        if (row[i] > 0) {
+          used.includes(row[i]) ? valid = false : used.push(row[i]);
+        }
       }
     });
     return valid;
