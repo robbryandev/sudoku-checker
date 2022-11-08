@@ -5,14 +5,26 @@ export default class Tile {
 
   isValid() {
     let valid = true;
-    let used = [];
     this.self.forEach((row) => {
+      let squares = [];
       for (let i = 0; i < 3; i++) {
-        if (row[i] > 0) {
-          used.includes(row[i]) ? valid = false : used.push(row[i]);
-        }
+        squares.push(row[i]);
+      }
+      if (!checkSquares(squares)) {
+        valid = false;
       }
     });
     return valid;
   }
+}
+
+export function checkSquares(squareVar) {
+  let used = [];
+  let valid = true;
+  squareVar.forEach((sq) => {
+    if (sq > 0) {
+      used.includes(sq) ? valid = false : used.push(sq);
+    }
+  });
+  return valid;
 }
