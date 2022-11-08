@@ -80,4 +80,10 @@ describe("Board.isValid", () => {
   test("Should check if an empty board is valid", () => {
     expect(boardVar.isValid()).toEqual(true);
   });
+
+  test("Should check if bad board is valid", () => {
+    boardVar.tiles[0].self[0] = [1, 0, 0];
+    boardVar.tiles[3].self[1] = [1, 0, 0];
+    expect(boardVar.isValid()).toEqual(false);
+  });
 });
