@@ -3,5 +3,14 @@ export default class Tile {
     this.self = [[0, 0, 0],[0, 0, 0],[0, 0, 0]];
   }
 
-  isValid() {}
+  isValid() {
+    let valid = true;
+    let used = [];
+    this.self.forEach((row) => {
+      for (let i = 0; i < 3; i++) {
+        used.includes(row[i]) ? valid = false : used.push(row[i]);
+      }
+    });
+    return valid;
+  }
 }
