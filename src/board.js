@@ -57,11 +57,16 @@ export default class Board {
       for (let c = 0; c < 3; c++) {
         // Get tile column squares
         let squares = [];
-        for(let sq = 0; sq < 3; sq++) {
-          squares.push(tileSet[c][sq]);
+        for (let tr = 0; tr < 3; tr++) {
+          tileSet.forEach((ts) => {
+            squares.push(ts.self[tr][c]);
+          });
         }
+
         // Check if column is valid
-        valid = checkSquares(squares);
+        if (!checkSquares(squares)) {
+          valid = false;
+        }
       }
     }
     return valid;

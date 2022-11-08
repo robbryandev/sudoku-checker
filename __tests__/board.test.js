@@ -62,4 +62,10 @@ describe("Board.checkColumns", () => {
   test("Should check if all empty columns are valid", () => {
     expect(boardVar.checkColumns()).toEqual(true);
   });
+
+  test("Should check if bad columns are valid", () => {
+    boardVar.tiles[0].self[0] = [1, 0, 0];
+    boardVar.tiles[3].self[1] = [1, 0, 0];
+    expect(boardVar.checkColumns()).toEqual(false);
+  });
 });
