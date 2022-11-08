@@ -69,3 +69,15 @@ describe("Board.checkColumns", () => {
     expect(boardVar.checkColumns()).toEqual(false);
   });
 });
+
+describe("Board.isValid", () => {
+  let boardVar;
+
+  beforeEach(() => {
+    boardVar = new Board();
+  });
+
+  test("Should check if an empty board is valid", () => {
+    expect(boardVar.isValid()).toEqual(true);
+  });
+});
