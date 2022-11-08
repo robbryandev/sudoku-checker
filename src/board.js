@@ -10,4 +10,6 @@ export default class Board {
 
     this.tiles = tileArray;
   }
+
+  checkTiles() {}
 }
