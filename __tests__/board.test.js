@@ -21,8 +21,16 @@ describe("Board", () => {
         { self: [[0, 0, 0], [0, 0, 0], [0, 0, 0]] }
       ]);
   });
+});
+
+describe("Board.checkTiles", () => {
+  let boardVar;
+
+  beforeEach(() => {
+    boardVar = new Board();
+  });
 
   test("Should check if board tiles are valid", () => {
     expect(boardVar.checkTiles()).toEqual(true);
   });
-});
+})
