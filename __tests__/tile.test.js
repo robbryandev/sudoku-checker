@@ -33,3 +33,15 @@ describe("Tile.isValid", () => {
     expect(tileVar.isValid()).toEqual(false);
   });
 });
+
+describe("Tile.isFilled", () => {
+  let tileVar;
+
+  beforeEach(() => {
+    tileVar = new Tile();
+  });
+
+  test("Should check if an empty tile is filled", () => {
+    expect(tileVar.isFilled()).toEqual(false);
+  });
+});

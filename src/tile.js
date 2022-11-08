@@ -16,6 +16,8 @@ export default class Tile {
     });
     return valid;
   }
+
+  isFilled() {}
 }
 
 export function checkSquares(squareVar) {
