@@ -33,4 +33,16 @@ describe("Board.checkTiles", () => {
   test("Should check if board tiles are valid", () => {
     expect(boardVar.checkTiles()).toEqual(true);
   });
-})
+});
+
+describe("Board.checkRows", () => {
+  let boardVar;
+
+  beforeEach(() => {
+    boardVar = new Board();
+  });
+
+  test("Should check if all empty rows are valid", () => {
+    expect(boardVar.checkRows()).toEqual(true);
+  });
+});

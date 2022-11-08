@@ -20,4 +20,6 @@ export default class Board {
     });
     return valid;
   }
+
+  checkRows() {}
 }
